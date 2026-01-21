@@ -7,3 +7,7 @@ npm -v
 
 npx playwright test 
 npx playwright test --headed
+
+git checkout -b {branch_name}
+
+git commit -m "{commit_message}"

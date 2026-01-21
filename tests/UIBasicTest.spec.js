@@ -18,3 +18,5 @@ test('Rahul Shetty Academy Test', async ({page}) => {
     await expect(page).toHaveTitle('LoginPage Practise | Rahul Shetty Academy');
     await page.locator('#username').type('rahulshettyacademy');
 })
+
+test('UI Controls Test', async ({page}) => {});
