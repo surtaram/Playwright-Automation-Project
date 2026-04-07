@@ -1,3 +1,9 @@
+System requirements for Playwright:
+Node.js: latest 20.x, 22.x or 24.x.
+Windows 11+, Windows Server 2019+ or Windows Subsystem for Linux (WSL).
+macOS 14 (Ventura) or later.
+Debian 12 / 13, Ubuntu 22.04 / 24.04 (x86-64 or arm64).
+
 brew install node
 
 npm init playwright
@@ -23,5 +29,62 @@ git push -u origin your-branch-name not linked to the GitHub repo
 
 
 Agents commands->npx playwright init-agents --loop=vscode
+
+**************Test Hooks**************
+test.describe - Group of tests
+test.beforeEach - Runs before each test
+test.afterEach - Runs after each test
+**Which are executed before/after each test
+
+test.beforeAll - Runs once before all tests in the file
+test.afterAll - Runs once after all tests in the file
+**which are executed once per worker before/after all tests.
+
+
+Running Codegen - 
+npx playwright codegen <website_url>
+npx playwright test --ui - Opens Playwright Test Runner UI
+npx playwright test --headed - Runs tests in headed mode
+npx playwright test --project webkit - Runs tests in WebKit browser
+npx playwright test --project webkit --project firefox -Runs tests in WebKit and Firefox browsers
+npx playwright test --debug - Runs tests in debug mode
+npx playwright test --last-failed - Runs only the tests that failed in the last run
+npx playwright test --grep "test name" - Runs tests matching the specified name or pattern
+npx playwright test --grep @smoke
+
+Locator - 
+If ID is present - 
+css -> tagname#id or #id
+xpath -> //*[@id='id']
+
+If class attribute is present -
+css -> tagname.classvalue or .classvalue
+
+If multiple classes are present -
+css -> tagname.class1.class2 or .class1.class2
+
+Write CSS based on any attribute -
+css -> tagname[attribute='value'] or [attribute='value']
+If tagname is not known -
+css -> [attribute='value']
+
+
+Disable parallelization
+npx playwright test --workers=1
+
+
+
+Complete RAG Pipeline --
+1. Data injection pipeline 
+2. Query retrieval pipeline 
+
+
+
+
+
+
+
+
+
 
 

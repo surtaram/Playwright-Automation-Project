@@ -21,10 +21,13 @@ const config=({
   },
   use:{
     browserName:'chromium',
-    headless:true
+    headless:true,
+    screenshot:'only-on-failure',
+    video:'retain-on-failure',
+    trace:'on'
   }
   
 });
-
+  
 module.exports = config;
 
